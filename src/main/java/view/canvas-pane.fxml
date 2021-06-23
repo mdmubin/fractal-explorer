@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import main.java.utils.Constants?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane id="canvasPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="main.java.controller.CanvasControl" onMouseClicked="#updateCanvas">
+
+    <Canvas style="-fx-cursor: crosshair;" fx:id="canvas">
+        <width>
+            <Constants fx:constant="VIEW_WIDTH"/>
+        </width>
+        <height>
+            <Constants fx:constant="VIEW_HEIGHT"/>
+        </height>
+    </Canvas>
+</Pane>
