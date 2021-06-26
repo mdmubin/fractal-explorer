@@ -17,17 +17,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        // the root node for the application
-        HBox root = new HBox();
-        // set scene for the application
-        Scene scene = new Scene(root);
-
-        Pane canvasPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("view/canvas-pane.fxml")));
-//        CanvasControl.setControlOperations((Canvas) canvasPane.getChildren().get(0));
-        root.getChildren().add(canvasPane);
-
+        HBox root = FXMLLoader.load(getClass().getResource("view/application-view.fxml"));
         //init stage properties
-        primaryStage.setScene(scene);
+        primaryStage.setScene(new Scene(root));
         primaryStage.setTitle("Mandelbrot Fractal Explorer");
         primaryStage.getIcons().add(new Image("res/images/fractal-spiral.png"));
         primaryStage.setResizable(false);
