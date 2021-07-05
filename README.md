@@ -5,3 +5,19 @@ If you don't know what the Mandelbrot Set/Fractal is, check out this article on 
 
 ### Functional Demo
 <img src="https://github.com/mdmubin/fractal-explorer/blob/master/Demo/explorer-demo.gif" width="920" height="640"/>
+
+
+---
+
+## Tested On:
+* **Java**
+```
+java 16.0.1 2021-04-20
+Java(TM) SE Runtime Environment (build 16.0.1+9-24)
+Java HotSpot(TM) 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
+```
+* **JavaFX**
+```
+JavaFX Version: 16
+JavaFX Runtime Version: 16+8
+```
