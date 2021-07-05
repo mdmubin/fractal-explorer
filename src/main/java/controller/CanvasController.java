@@ -99,6 +99,8 @@ public class CanvasController {
      * Show the Real and Imaginary values of the Canvas at the point where the mouse pointer is.
      */
     public void showReImVals(MouseEvent event) {
+        ControllerInstances.settingsController.coordinatesLabel.setText("Coordinates at pointer:");
+
         ControllerInstances.settingsController.realVal.setText(
                 String.valueOf(current_xpos + event.getSceneX() / current_zoom)
         );
@@ -111,6 +113,7 @@ public class CanvasController {
      * Update the real and imaginary values when pointer leaves the canvas to value of the center of the canvas
      */
     public void showCenterVals() {
+        ControllerInstances.settingsController.coordinatesLabel.setText("Coordinates at centre:");
         ControllerInstances.settingsController.realVal.setText(
                 String.valueOf(current_xpos + Constants.VIEW_WIDTH / (current_zoom * 2))
         );
