@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 
 <Pane fx:id="settingsPane" prefHeight="800.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/16"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.SettingsPanel">
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.SettingsController">
 
     <Label layoutX="14.0" layoutY="53.0" minWidth="-Infinity" prefHeight="25.0" prefWidth="90.0" text="Iterations"/>
 

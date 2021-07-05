@@ -11,7 +11,7 @@ import main.java.model.Mandelbrot;
 import main.java.utils.Constants;
 
 
-public class CanvasPanel {
+public class CanvasController {
     @FXML
     public Canvas canvas;
 

@@ -7,6 +7,6 @@ package main.java.controller;
  * So better to have this than not ¯\_(ツ)_/¯
  */
 class ControllerInstances {
-    public static CanvasPanel canvasController;
-    public static SettingsPanel settingsController;
+    public static CanvasController canvasController;
+    public static SettingsController settingsController;
 }

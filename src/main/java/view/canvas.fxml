@@ -2,7 +2,7 @@
 
 <?import javafx.scene.canvas.Canvas?>
 
-<Canvas fx:id="canvas" fx:controller="main.java.controller.CanvasPanel"
+<Canvas fx:id="canvas" fx:controller="main.java.controller.CanvasController"
         onMouseClicked="#zoomHandler" onMouseMoved="#showReImVals" onMouseExited="#showCenterVals"
         xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
 

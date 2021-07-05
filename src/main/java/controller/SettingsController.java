@@ -17,7 +17,7 @@ import javax.imageio.ImageIO;
 import java.io.File;
 
 
-public class SettingsPanel {
+public class SettingsController {
     @FXML
     Slider iterationsSlider;
     @FXML
@@ -55,7 +55,7 @@ public class SettingsPanel {
         zoomLevel.setText(String.valueOf(Constants.DEFAULT_ZOOM));
 
         // time to render mandelbrot set
-        renderTime.setText("Rendered in " + CanvasPanel.renderTime + "s");
+        renderTime.setText("Rendered in " + CanvasController.renderTime + "s");
 
         ControllerInstances.settingsController = this;
     }
