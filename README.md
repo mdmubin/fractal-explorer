@@ -22,7 +22,7 @@ JavaFX Version: 16
 JavaFX Runtime Version: 16+8
 ```
 * **OS** 
->! (Not sure why this would matter, but still...just in case...)
+> (Not sure why this would matter, but still...just in case...)
 ```
 OS Name:                   Microsoft Windows 10 Pro
 OS Version:                10.0.19043 N/A Build 19043
