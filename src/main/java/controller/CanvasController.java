@@ -1,25 +1,28 @@
 package main.java.controller;
 
-import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.image.PixelWriter;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import javafx.fxml.FXML;
 
 import main.java.model.Mandelbrot;
 import main.java.utils.Constants;
 
 
+/**
+ * The Controller for the canvas
+ */
 public class CanvasController {
-    @FXML
-    public Canvas canvas;
+    @FXML public Canvas canvas;
 
     private double current_xpos = Constants.DEFAULT_XPOS;
     private double current_ypos = Constants.DEFAULT_YPOS;
     private double current_zoom = Constants.DEFAULT_ZOOM;
 
     public static double renderTime;
+
 
     public void initialize() {
         drawFractal();
