@@ -48,10 +48,10 @@ public class SettingsController {
         iterationValue.setText(String.valueOf(Constants.CURRENT_MAX_ITER));
 
         // zoom level value
-        zoomLevel.setText(String.valueOf(Constants.DEFAULT_ZOOM));
+        zoomLevel.setText(String.valueOf((int) (Constants.DEFAULT_ZOOM / 2)));
 
         // time to render mandelbrot set
-        renderTime.setText("Rendered in " + CanvasController.renderTime + "s");
+        renderTime.setText(String.format("Rendered in %.3f s", CanvasController.renderTime));
 
         ControllerInstances.settingsController = this;
     }

@@ -43,7 +43,7 @@ public class CanvasController {
                         i / current_zoom + current_xpos,
                         current_ypos - j / current_zoom
                 );
-                drawer.setColor(i, j, getRGBColor(mandelbrot_iters));
+                drawer.setColor(i, j, rainbowSpectrumColor(mandelbrot_iters));
             }
         }
         renderTime = (System.nanoTime() - start) / 1e9;
@@ -51,12 +51,12 @@ public class CanvasController {
 
     /**
      * Get the RGB color value based on the number of iterations taken to determine whether a point is in the
-     * mandelbrot fractal or not.
+     * mandelbrot fractal or not. Creates a rainbow like spectrum for the mandelbrot colors
      * <p>
      * Returns a value of Color.BLACK if the number of iterations taken to determine is equal to the MAX_ITERS
      * </p>
      */
-    public Color getRGBColor(int iters) {
+    public Color rainbowSpectrumColor(int iters) {
         if (iters == Constants.CURRENT_MAX_ITER)
             return Color.BLACK;
         double smooth_val = iters + 1 - Math.log(Math.log(Mandelbrot.z_n.modulus())) / Math.log(2);
@@ -77,7 +77,7 @@ public class CanvasController {
             adjustZoom(event.getSceneX(), event.getSceneY(), false);
 
         ControllerInstances.settingsController.zoomLevel.setText(String.format("%d", (int) current_zoom));
-        ControllerInstances.settingsController.renderTime.setText("Rendered in " + renderTime + "s");
+        ControllerInstances.settingsController.renderTime.setText(String.format("Rendered in %.3f s", renderTime));
     }
 
     /**
