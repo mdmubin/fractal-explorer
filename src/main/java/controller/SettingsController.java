@@ -78,8 +78,7 @@ public class SettingsController {
                         ControllerInstances.canvasController.canvas.snapshot(null, null), null),
                         "png", imageFile
                 );
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
