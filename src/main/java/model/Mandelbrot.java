@@ -12,7 +12,7 @@ public class Mandelbrot {
         int iters = 0;
         while (z.modulusSquared() <= 4.0) {
             z = Complex.add(Complex.multiply(z, z), c);
-            if (iters == Constants.MAX_ITER) {
+            if (iters == Constants.CURRENT_MAX_ITER) {
                 break;
             }
             iters++;
