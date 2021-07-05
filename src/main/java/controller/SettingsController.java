@@ -83,8 +83,16 @@ public class SettingsController {
         }
     }
 
-    public void resetCanvas() {
-        ControllerInstances.canvasController.resetValues();
+    /**
+     * Reset the canvas and zoom properties
+     */
+    public void resetCanvas(MouseEvent event) {
+        if (event.getButton() == MouseButton.PRIMARY) {
+            Constants.CURRENT_MAX_ITER = Constants.DEFAULT_MAX_ITER;
+            iterationsSlider.setValue(Constants.CURRENT_MAX_ITER);
+            iterationValue.setText(String.valueOf(Constants.CURRENT_MAX_ITER));
+            ControllerInstances.canvasController.resetValues();
+        }
     }
 
     /**
