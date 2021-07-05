@@ -10,8 +10,7 @@
 <Pane fx:id="settingsPane" prefHeight="800.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/16"
       xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.SettingsPanel">
 
-    <Label layoutX="14.0" layoutY="53.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-           minWidth="-Infinity" prefHeight="25.0" prefWidth="90.0" text="Iterations"/>
+    <Label layoutX="14.0" layoutY="53.0" minWidth="-Infinity" prefHeight="25.0" prefWidth="90.0" text="Iterations"/>
 
     <Slider fx:id="iterationsSlider" blockIncrement="100.0" layoutX="34.0" layoutY="83.0" majorTickUnit="100.0"
             max="2000.0" min="100" minorTickCount="0" prefHeight="14.0" prefWidth="185.0" showTickMarks="true"
@@ -20,7 +19,8 @@
     <Spinner fx:id="iterationSpinner" editable="true" layoutX="238.0" layoutY="78.0" max="2000" min="100"
              prefHeight="25.0" prefWidth="105.0"/>
 
-    <Button layoutX="129.0" layoutY="739.0" mnemonicParsing="false" text="Reset Defaults"/>
+    <Button fx:id="resetButton" layoutX="129.0" layoutY="739.0" mnemonicParsing="false" text="Reset Defaults"
+            onMouseClicked="#resetCanvas"/>
     <Separator layoutX="75.0" layoutY="200.0" prefWidth="200.0"/>
     <Separator layoutX="75.0" layoutY="584.0" prefWidth="200.0"/>
 
@@ -29,8 +29,8 @@
     <Label layoutX="34.0" layoutY="292.0" text="Imaginary:"/>
     <Label layoutX="14.0" layoutY="366.0" text="Zoom Level:"/>
 
-    <Label fx:id="realVal" layoutX="115.0" layoutY="259.0" prefHeight="17.0" prefWidth="185.0"/>
-    <Label fx:id="imaginaryVal" layoutX="115.0" layoutY="292.0" prefHeight="17.0" prefWidth="185.0"/>
+    <Label fx:id="realVal" layoutX="115.0" layoutY="259.0" prefHeight="17.0" prefWidth="185.0" text="0.0"/>
+    <Label fx:id="imaginaryVal" layoutX="115.0" layoutY="292.0" prefHeight="17.0" prefWidth="185.0" text="0.0"/>
     <Label fx:id="zoomLevel" layoutX="115.0" layoutY="366.0" prefHeight="17.0" prefWidth="128.0"/>
 
     <Button fx:id="snapshot" layoutX="136.0" layoutY="660.0" mnemonicParsing="false" text="Save Image"

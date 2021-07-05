@@ -3,8 +3,8 @@
 <?import javafx.scene.canvas.Canvas?>
 
 <Canvas fx:id="canvas" fx:controller="main.java.controller.CanvasPanel"
-        xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-        onMouseClicked="#zoomHandler" onMouseMoved="#showMouseXY" onMouseExited="#updateVals">
+        onMouseClicked="#zoomHandler" onMouseMoved="#showReImVals" onMouseExited="#showCenterVals"
+        xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
 
     <width>800</width>
     <height>800</height>

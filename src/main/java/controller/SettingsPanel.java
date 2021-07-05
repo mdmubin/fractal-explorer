@@ -2,7 +2,7 @@ package main.java.controller;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
-import javafx.scene.canvas.Canvas;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.Spinner;
@@ -19,15 +19,23 @@ import java.io.File;
 
 public class SettingsPanel {
     @FXML
-    public Slider iterationsSlider;
+    Slider iterationsSlider;
     @FXML
-    public Spinner<Integer> iterationSpinner;
+    Spinner<Integer> iterationSpinner; //probably gonna change this to a label or number field. feels unnecessary
     @FXML
-    public Label renderTime;
+    Label renderTime;
     @FXML
-    public Pane settingsPane;
+    Pane settingsPane;
     @FXML
-    private Label zoomLevel;
+    Button resetButton;
+    @FXML
+    Button snapshot;
+    @FXML
+    Label imaginaryVal;
+    @FXML
+    Label realVal;
+    @FXML
+    Label zoomLevel;
 
 
     public void initialize() {
@@ -48,6 +56,8 @@ public class SettingsPanel {
 
         // time to render mandelbrot set
         renderTime.setText("Rendered in " + CanvasPanel.renderTime + "s");
+
+        ControllerInstances.settingsController = this;
     }
 
     /**
@@ -64,12 +74,18 @@ public class SettingsPanel {
                 fileChooser.setInitialFileName("mandelbrot");
 
                 File imageFile = fileChooser.showSaveDialog(settingsPane.getScene().getWindow());
-                Canvas canvas = (Canvas) settingsPane.getParent().getChildrenUnmodifiable().get(0);
-                ImageIO.write(SwingFXUtils.fromFXImage(canvas.snapshot(null, null), null), "png", imageFile);
-            } catch (Exception e) {
+                ImageIO.write(SwingFXUtils.fromFXImage(
+                        ControllerInstances.canvasController.canvas.snapshot(null, null), null),
+                        "png", imageFile
+                );
+            }
+            catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
     }
 
+    public void resetCanvas() {
+        ControllerInstances.canvasController.resetValues();
+    }
 }
