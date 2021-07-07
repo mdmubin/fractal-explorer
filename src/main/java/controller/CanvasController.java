@@ -54,7 +54,6 @@ public class CanvasController {
      * mandelbrot fractal or not. Creates a rainbow like spectrum for the mandelbrot colors
      * <p>
      * Returns a value of Color.BLACK if the number of iterations taken to determine is equal to the MAX_ITERS
-     * </p>
      */
     public Color rainbowSpectrumColor(int iters) {
         if (iters == Constants.CURRENT_MAX_ITER)
