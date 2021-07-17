@@ -16,7 +16,7 @@ java 16.0.1 2021-04-20
 Java(TM) SE Runtime Environment (build 16.0.1+9-24)
 Java HotSpot(TM) 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
 ```
-> (would probably work with java 8+...hopefully...)
+>(would probably work with java 8+...hopefully...)
 
 * **JavaFX** (required dependancy)
 ```
@@ -24,7 +24,7 @@ JavaFX Version: 16
 JavaFX Runtime Version: 16+8
 ```
 * **OS** 
-> (Not sure why this would matter, but still...just in case...)
+>(Not sure why this would matter, but still...just in case...)
 ```
 OS Name:                   Microsoft Windows 10 Pro
 OS Version:                10.0.19043 N/A Build 19043
